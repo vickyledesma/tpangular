@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HappydogAboutComponent } from '../happydog-about/happydog-about.component';
-import { HappydogFoodComponent } from '../happydog-food/happydog-food.component';
+import { HappydogAboutComponent } from './happydog-about/happydog-about.component';
+import { HappydogFoodComponent } from './happydog-food/happydog-food.component';
 
 const routes: Routes = [{
   path:'',

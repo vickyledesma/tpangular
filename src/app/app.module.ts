@@ -10,6 +10,7 @@ import { CartComponent } from './cart/cart.component';
 import { RouterModule} from '@angular/router';
 import { HappydogAboutComponent } from './happydog-about/happydog-about.component';
 import { HappydogFoodComponent } from './happydog-food/happydog-food.component';
+import {AppRoutingModule } from './app-routing.module'
 
 
 
@@ -25,6 +26,7 @@ import { HappydogFoodComponent } from './happydog-food/happydog-food.component';
     BrowserModule,
     FormsModule,
     RouterModule,
+    AppRoutingModule,
     
    
   ],
