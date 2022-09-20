@@ -1,0 +1,29 @@
+<table class="table text-center" >
+    <thead>
+      <tr>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Para perro:</th>
+        <th scope="col">Cantidad</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let food of foods" [ngClass]="{'offer': food.offer }">
+        <td><img width="90" src = {{food.image}}></td>
+        <td>{{food.name}}</td>
+        <td>{{food.brand}}</td>
+        <td>{{food.age}}</td>
+        <td>{{food.price| currency}}</td>
+        <td> <span class="badge text-bg-danger" *ngIf="food.stock==0">SIN STOCK</span></td>
+        <td>
+            <button class="btn btn primary btn sm" (click)="Downquantity(food)">-</button>
+            <input type="text" width="10" [(ngModel)]="food.quantity">
+            <button class="btn btn primary btn sm" (click)="Upquantity(food)">+</button>
+        </td>
+        
+      </tr>
+      
+    </tbody>
+  </table>

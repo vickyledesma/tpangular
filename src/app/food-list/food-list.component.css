@@ -1,0 +1,9 @@
+.offer{
+    border: 2px solid yellow; 
+    background-color: seashell
+    ;
+}
+
+input{
+    max-width: 40px;
+}
