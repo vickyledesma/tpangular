@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HappydogAboutComponent } from './happydog-about/happydog-about.component';
 import { HappydogFoodComponent } from './happydog-food/happydog-food.component';
 
+
 const routes: Routes = [{
   path:'',
   redirectTo:'food',
@@ -18,7 +19,7 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
