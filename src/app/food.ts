@@ -7,5 +7,6 @@ export interface food{
     price : number,
     offer: boolean;
     quantity : number;
+    clearance: boolean;
     
 }

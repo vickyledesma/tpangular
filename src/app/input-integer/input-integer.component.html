@@ -1,1 +1,5 @@
-<p>input-integer works!</p>
+<td>
+    <button class="btn btn primary btn sm" (click)="downQuantity()">-</button>
+    <input type="text" width="10" [(ngModel)]="quantity" (keyup)="changeQuantity($event)">
+    <button class="btn btn primary btn sm" (click)="upQuantity()">+</button>
+</td>

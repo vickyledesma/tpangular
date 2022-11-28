@@ -18,10 +18,12 @@
         <td>{{food.price| currency}}</td>
         <td> <span class="badge text-bg-danger" *ngIf="food.stock==0">SIN STOCK</span></td>
         <td>
-            <button class="btn btn primary btn sm" (click)="Downquantity(food)">-</button>
-            <input type="text" width="10" [(ngModel)]="food.quantity">
-            <button class="btn btn primary btn sm" (click)="Upquantity(food)">+</button>
-        </td>
+          <app-input-integer [(quantity)]="food.quantity" [max]="food.stock" *ngIf="food.stock" (maxReached)="maxReached($event)"></app-input-integer>
+         
+      </td>
+      <td>
+              <button class="btn btn-primary" (click)="addToCart(food)">Comprar</button>
+      </td>
         
       </tr>
       

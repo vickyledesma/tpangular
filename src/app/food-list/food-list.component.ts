@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HAMMER_LOADER } from '@angular/platform-browser';
 import { food } from '../food';
+import { FoodCartService } from '../food-cart.service';
 
 @Component({
   selector: 'app-food-list',
@@ -14,10 +16,11 @@ export class FoodListComponent implements OnInit {
     "brand" : "RAZA",
     "age": "Adulto",
     "image" :"https://www.alimentoraza.com/wp-content/uploads/2022/03/RAZA-PERROS-Razas-pequenas_3D_Sin-Kg-250x308.jpg",
-    "stock" : 5,
+    "stock" : 1,
     "price" : 203,
     "offer": true,
     "quantity" : 0,
+    "clearance" : false,
     
   },
   {
@@ -30,6 +33,8 @@ export class FoodListComponent implements OnInit {
     "price" : 203,
     "offer" : false,
     "quantity" : 0,
+    "clearance" : false,
+    
     
    },
   {
@@ -39,16 +44,27 @@ export class FoodListComponent implements OnInit {
     "age": "Adulto",
     "image" :"https://www.alimentoraza.com/wp-content/uploads/2022/03/RAZA-PERROS-Razas-pequenas_3D_Sin-Kg-250x308.jpg",
     "price" : 203,
-    "stock" : 0,
+    "stock" : 1,
     "offer": false,
     "quantity" : 0,
+    "clearance" : true,
     
-    }]
+    
+}]
   
-  constructor() { }
+  constructor( private cart: FoodCartService)
+  {
+  
+   }
 
   ngOnInit(): void {
   }
+  addToCart(food: food) : void {
+    this.cart.addToCart(food);
+    food.stock -= food.quantity;
+    food.stock = 0;
+  }
+
  Downquantity(food: food): void {
   if(food.quantity > 0)
     food.quantity--;
@@ -59,6 +75,9 @@ export class FoodListComponent implements OnInit {
     food.quantity++;
    }
   }
+  maxReached(m: string) {
+    alert(m);
+    }
   
 
   
