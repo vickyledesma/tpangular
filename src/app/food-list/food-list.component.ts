@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HAMMER_LOADER } from '@angular/platform-browser';
 import { food } from '../food';
 import { FoodCartService } from '../food-cart.service';
+import { FoodDataService } from '../food-data.service';
 
 @Component({
   selector: 'app-food-list',
@@ -52,29 +53,25 @@ export class FoodListComponent implements OnInit {
     
 }]
   
-  constructor( private cart: FoodCartService)
+  constructor( 
+    private cart: FoodCartService,
+    private foodservice: FoodDataService,
+    )
   {
   
    }
 
   ngOnInit(): void {
+    this.foodservice.getAll()
+    .subscribe(foods => this.foods = foods);
   }
+  
   addToCart(food: food) : void {
     this.cart.addToCart(food);
     food.stock -= food.quantity;
     food.stock = 0;
   }
 
- Downquantity(food: food): void {
-  if(food.quantity > 0)
-    food.quantity--;
-  
-  }
-  Upquantity(food: food): void {
-    if(food.quantity < food.stock){ 
-    food.quantity++;
-   }
-  }
   maxReached(m: string) {
     alert(m);
     }
