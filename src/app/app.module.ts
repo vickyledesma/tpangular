@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { FoodListComponent } from './food-list/food-list.component';
 
 import {FormsModule} from '@angular/forms';
-
+import {HttpClientModule} from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { RouterModule} from '@angular/router';
 import { HappydogAboutComponent } from './happydog-about/happydog-about.component';
@@ -28,8 +28,8 @@ import { InputIntegerComponent } from './input-integer/input-integer.component'
     BrowserModule,
     FormsModule,
     RouterModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    HttpClientModule,
    
   ],
   providers: [],
