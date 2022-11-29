@@ -11,47 +11,8 @@ import { FoodDataService } from '../food-data.service';
 })
 export class FoodListComponent implements OnInit {
 
-  foods : food[] = [ {
+  foods: food[] = [];
 
-    "name" : "RAZA",
-    "brand" : "RAZA",
-    "age": "Adulto",
-    "image" :"https://www.alimentoraza.com/wp-content/uploads/2022/03/RAZA-PERROS-Razas-pequenas_3D_Sin-Kg-250x308.jpg",
-    "stock" : 1,
-    "price" : 203,
-    "offer": true,
-    "quantity" : 0,
-    "clearance" : false,
-    
-  },
-  {
-    
-    "name" : "Estampa Premium",
-    "brand" : "Estampa",
-    "age": "Cachorro",
-    "image" :"https://www.alimentoraza.com/wp-content/uploads/2022/03/RAZA-PERROS-Razas-pequenas_3D_Sin-Kg-250x308.jpg",
-    "stock" : 4,
-    "price" : 203,
-    "offer" : false,
-    "quantity" : 0,
-    "clearance" : false,
-    
-    
-   },
-  {
-    
-    "name" : "Royal Canin",
-    "brand" : "Royal Canin",
-    "age": "Adulto",
-    "image" :"https://www.alimentoraza.com/wp-content/uploads/2022/03/RAZA-PERROS-Razas-pequenas_3D_Sin-Kg-250x308.jpg",
-    "price" : 203,
-    "stock" : 1,
-    "offer": false,
-    "quantity" : 0,
-    "clearance" : true,
-    
-    
-}]
   
   constructor( 
     private cart: FoodCartService,
