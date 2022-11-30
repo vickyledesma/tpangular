@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FoodListComponent } from './food-list/food-list.component';
 
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { RouterModule} from '@angular/router';
@@ -30,6 +30,8 @@ import { InputIntegerComponent } from './input-integer/input-integer.component'
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
    
   ],
   providers: [],

@@ -1,7 +1,8 @@
 <h2>Disfrutaste comprando en la web? Dejanos tu reseña anonima!</h2>
+<form #form="ngForm" (ngSubmit)="Agregar(form.value)">
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Reseña</label>
-    <textarea class="form-control" name="reseña" value="reseña"rows="3"></textarea>
-    <button class="btn btn-primary" (click)="Addresea()">Enviar</button>
-   
+    <input type="text" name="resea" value="resea" rows="3" ngModel>
+    <input type="submit" value="addreasea">
   </div>
+  </form>
