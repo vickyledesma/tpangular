@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FoodDataService } from '../food-data.service';
-import { form } from './form';
+import { forms } from '../form';
 
 
 @Component({
@@ -10,17 +9,23 @@ import { form } from './form';
   styleUrls: ['./happydog-about.component.css']  
 })
 export class HappydogAboutComponent implements OnInit {
-form: any; 
+
+  formss: forms[] = [];
+  
 
   constructor(private foodservice: FoodDataService,) { 
     
   }
 
   ngOnInit(): void {
-    
+    this.foodservice.getAllreseña()
+    .subscribe;
   }
   public Agregar(form: {resea: string}){
     this.foodservice.Agregar(form);
-     };
- }
+  }
+  public mensaje(){
+    alert('Su reseña ha sido enviada');
+  }
+}
 
