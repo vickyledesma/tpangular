@@ -10,7 +10,7 @@ import { forms } from '../form';
 })
 export class HappydogAboutComponent implements OnInit {
 
-  formss: forms[] = [];
+  form: forms[] = [];
   
 
   constructor(private foodservice: FoodDataService,) { 
@@ -18,8 +18,7 @@ export class HappydogAboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.foodservice.getAllreseña()
-    .subscribe;
+
   }
   public Agregar(form: {resea: string}){
     this.foodservice.Agregar(form);

@@ -19,10 +19,6 @@ export class FoodDataService {
         tap((foods: food[]) => foods.forEach(food => food.quantity = 0))
     );
 }
-  public getAllreseña(): Observable<forms[]> {
-    return this.http.get<forms[]>('https://62b5e10d42c6473c4b3c2a73.mockapi.io/api/reseas');
-
-  }
 
   public Agregar(forms: {resea: string}){
     return this.http.post('https://62b5e10d42c6473c4b3c2a73.mockapi.io/api/reseas',forms).
