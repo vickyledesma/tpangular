@@ -20,8 +20,8 @@ export class HappydogAboutComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  public Agregar(form: {resea: string}){
-    this.foodservice.Agregar(form);
+  public Agregar(forms: {resea: string}){
+    this.foodservice.Agregar(forms);
   }
   public mensaje(){
     alert('Su reseña ha sido enviada');
